@@ -4,7 +4,7 @@ package cse360assign2;
  * @author Owen O'Toole
  * @version Feb 23, 2019
  * 
- * @category Assignment 2: Version 1 - Documented Code
+ * @category Assignment 2: Version 2 - Basic Calculator functions implemented
  */
 public class Calculator {
 
@@ -30,7 +30,7 @@ public class Calculator {
 	 * @param value - the integer added to the current total
 	 */
 	public void add (int value) {
-		
+		total = total + value; //Adds value to total
 	}
 	
 	/**
@@ -38,7 +38,7 @@ public class Calculator {
 	 * @param value - the integer subtracted from current total
 	 */
 	public void subtract (int value) {
-		
+		total = total - value; //Subtracts value from total
 	}
 	
 	/**
@@ -46,7 +46,7 @@ public class Calculator {
 	 * @param value - the integer to multiply the current total by
 	 */
 	public void multiply (int value) {
-		
+		total = total * value; //Multiplies total by value
 	}
 	
 	/**
@@ -54,7 +54,14 @@ public class Calculator {
 	 * @param value - the integer to divide the current total by
 	 */
 	public void divide (int value) {
-		
+		if (value == 0) //Checks to see if division by 0 occurs
+		{
+			total = 0; //Total will be set to 0 if the denominator is 0
+		}
+		else
+		{
+			total = total / value; //Otherwise, value divides total normally
+		}
 	}
 	
 	/**
